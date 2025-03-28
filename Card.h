@@ -24,5 +24,10 @@ private:
     int rank;
     Color color;
     int value; 
+/* friend std::ostream& operator<<(std::ostream& os, const Card& card) {
+        os << card.rank << " of " << card.color;
+        return os;
+    }
+*/
 };
 #endif

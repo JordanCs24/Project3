@@ -20,7 +20,20 @@ int main(){
     cout << MyCard.strCard() << endl;
     */
    Deck deckOfCards;
-
-    
-    return 0;
+   cout << "Welcome to TigerGame!" << endl;
+   cout << "The Deck was shuffled and each player has 6 drawn cards." << endl << endl;
+   cout << "Round 1" << endl;
+   cout << "-------" << endl << endl;
+   cout << "The computer plays: " << endl;
+   cout << "Your hand: " << endl;
+   cout << "Which card do you want to play? " << endl;
+   cout << "You played: " << endl;
+/*
+   cout << endl << endl << "Begining Testing the vector and shuffle function" << endl;
+   deckOfCards.printDeck();
+   cout << "After Shuffle" << endl;
+   deckOfCards.shuffle();
+   deckOfCards.printDeck();
+*/
+   return 0;
 }

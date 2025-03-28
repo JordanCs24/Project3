@@ -48,3 +48,4 @@ Card::Color Card::getColor(){
 int Card::getValue(){
     return this->value;
 }
+
