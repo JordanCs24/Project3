@@ -10,14 +10,6 @@ Description:
 
 #include <vector>
 #include <algorithm>
-#include <cstdlib>
-#include <random>
-#include <cstdlib>
-#include <vector>
-#include <fstream>
-#include <algorithm>
-#include <chrono>
-#include <ctime>
 #include "Card.h"
 using namespace std;
 

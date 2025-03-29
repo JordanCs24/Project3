@@ -32,7 +32,6 @@ Deck::Deck(){
     }
 }
 void Deck::shuffle(){
-    srand((unsigned(0)));
     random_shuffle(deck.begin(),deck.end()); // shuffles through the vector deck
 }
 Card Deck::drawCard(){
