@@ -13,7 +13,7 @@ Description:
 #include <string.h>
 using namespace std;
 
-class Hand : Deck{
+class Hand : public Deck{
 private:
     vector<Card> hand;
 public:
@@ -22,5 +22,5 @@ public:
     string strHand();
     Card dealCard(int num);
     int getHandSize();
-};
+}; 
 #endif

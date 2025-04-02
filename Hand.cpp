@@ -8,12 +8,6 @@ Description:
 #include "Hand.h"
 #include <sstream>
 
-/*
-
-
-Function getHandSize() returns the current number of cards in the hand.
-
-*/
 Hand::Hand(){
 
 }
@@ -23,7 +17,7 @@ Hand::Hand(Deck deck, int N){
     from the deck. Implement this constructor so that it draws N cards from the deck
     when an instance of Hand is instantiated.
 */
-   for( int i = 0; i < N; i++){
+   for( int i = 0; i < N;i++){
         hand.push_back(deck.drawCard());
     }
 }
@@ -40,7 +34,6 @@ string Hand::strHand(){
     for(int i = 0; i < hand.size(); i++){
         showHand << "[" << i + 1 << "] " << hand[i].strCard() << " ";
     }
-
     return showHand.str();
 }
 Card Hand::dealCard(int num){
