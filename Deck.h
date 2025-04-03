@@ -1,9 +1,9 @@
 /*
 My Name: Jordan Sowell
 Section: CPSC 1020
-Date:
-Time:
-Description: 
+Date: 4/5/2025
+Time: 20+ minutes
+Description: Deck header file for the Deck class that holds the function and method declarations
 */
 #ifndef DECK_H
 #define DECK_H
@@ -21,7 +21,6 @@ public:
     void shuffle();
     Card drawCard();
     int getDeckSize();
-//  void printDeck(); // FUNCTION TO TEST DELETE AFTER USE
 };
 
 #endif

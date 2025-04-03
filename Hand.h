@@ -1,9 +1,9 @@
 /*
 My Name: Jordan Sowell
 Section: CPSC 1020
-Date:
-Time:
-Description: 
+Date: 4/5/2025
+Time: 20+ minutes
+Description: Hand header file for the Hand class that holds the function and method declarations
 */
 #ifndef HAND_H
 #define HAND_H

@@ -1,9 +1,9 @@
 /*
 My Name: Jordan Sowell
 Section: CPSC 1020
-Date:
-Time:
-Description: 
+Date: 4/5/2025
+Time: 1+ hours
+Description: Card cpp file for the Card class that holds the function definitions
 */
 #include "Card.h"
 

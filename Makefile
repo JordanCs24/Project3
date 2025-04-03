@@ -1,7 +1,7 @@
 #My Name: Jordan Sowell
 #My Class: CPSC 1020
-#Date: 
-#Time: 
+#Date: 4/5/2025
+#Time: 1 minute
 #Description: Make a file
 
 COMPILER = g++

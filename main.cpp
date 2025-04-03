@@ -1,8 +1,8 @@
 /*
 My Name: Jordan Sowell
 Section: CPSC 1020
-Date:
-Time:
+Date: 4/5/2025
+Time: 6+ hours
 Description: 
 */
 #include <iostream>
@@ -21,21 +21,17 @@ int main(){
    deckOfCards.shuffle();
    Player human(deckOfCards,6);
    Player computer(deckOfCards,6);
-   cout << "Human score After init: " << human.score << endl;
-   Card computerComp;
-   Card humanComp;
+   Card computerComp; // Stands for computer comparison holds the exact card that was played by the computer
+   Card humanComp; // Stands for human comparision holds the exact card that was played by the human
    int choice = 0;
-  //    - Determine who won the round and update points accordingly.
-  //    - Print results for current round.
-  // 4. Print final game results.
    cout << "Welcome to TigerGame!" << endl;
    cout << "The Deck was shuffled and each player has 6 drawn cards." << endl << endl;
       
-   for (int i = 1; i < deckOfCards.getDeckSize(); i++){
+   for (int i = 1; i <= 6; i++){ // loop so things don't get repetitive
 
       cout << "Round " << i  << endl;
       cout << "-------" << endl << endl;
-      computerComp = computer.hand.dealCard(1);
+      computerComp = computer.hand.dealCard(1); // deal the first card every time
       cout << "The computer plays: " << computerComp.strCard() << endl; // does 1 to get the first card in the deck
       cout << "Your hand: " << human.hand.strHand() << endl;
       cout << "Which card do you want to play? ";
@@ -47,12 +43,12 @@ int main(){
          cin >> choice;
       }
 
-      humanComp = human.hand.dealCard(choice);
+      humanComp = human.hand.dealCard(choice); // holds the value of the human's card
       cout << "You played: " << humanComp.strCard() << endl;
 
       if (humanComp.getValue() > computerComp.getValue()){
             cout << "You win this round!" << endl << endl;
-            human.score += humanComp.getValue();
+            human.score += humanComp.getValue(); // add the value to the score based off of the humans card value
             cout << "Current scores: " << endl;
             cout << "Human: " << human.score << endl;
             cout << "Computer: " << computer.score << endl << endl;
@@ -60,7 +56,7 @@ int main(){
          }
       else if (humanComp.getValue() < computerComp.getValue()){
             cout << "The computer wins this round!" << endl << endl;
-            computer.score += computerComp.getValue();
+            computer.score += computerComp.getValue(); // add the value to the score based off of the computer card value
             cout << "Current scores: " << endl;
             cout << "Human: " << human.score << endl;
             cout << "Computer: " << computer.score << endl << endl;
@@ -71,6 +67,19 @@ int main(){
             cout << "Human: " << human.score << endl;
             cout << "Computer: " << computer.score << endl << endl;
       }
+   }
+   cout << "FINAL SCORE: " << endl;
+   cout << "Human: " << human.score << endl;
+   cout << "Computer: " << computer.score << endl;
+   
+   if(human.score > computer.score){
+      cout << "You have won!" << endl;
+   }
+   else if(human.score < computer.score){
+      cout << "Computer has won!" << endl;
+   }
+   else{
+      cout << "You and the computer have tied!" << endl;
    }
    return 0;
 }

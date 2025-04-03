@@ -1,9 +1,9 @@
 /*
 My Name: Jordan Sowell
 Section: CPSC 1020
-Date:
-Time:
-Description: 
+Date: 4/5/2025
+Time: 1+ hours
+Description: Hand cpp file for the Hand class that holds the function  definitions
 */
 #include "Hand.h"
 #include <sstream>
@@ -14,35 +14,19 @@ Hand::Hand(){
 Hand::Hand(Deck deck, int N){
 
    for( int i = 0; i < N;i++){
-        hand.push_back(deck.drawCard());
+        hand.push_back(deck.drawCard()); // push the 
     }
 }
 string Hand::strHand(){
-/*
-    Hand has three member functions, strHand , dealCard , and getHandSize . Use
-    strHand() to show human their current hand. This function must return a string
-    formatted as follows:
-    [1] purple:5 [2] orange:7 [3] orange:2 [4] purple:10 [5] orange:9 [6] black:6
-    where the numbers in brackets represent the position of each card in the hand (i.e.,
-    in vector hand).
-*/
     stringstream showHand;
-    showHand.flush();
-    for(int i = 0; i < hand.size(); i++){
+    showHand.flush(); // just to make sure all the string's content was dropped before inserting more into the string
+    for(size_t i = 0; i < hand.size(); i++){
         showHand << "[" << i + 1 << "] " << hand[i].strCard() << " ";
     }
     return showHand.str();
 }
 Card Hand::dealCard(int num){
-/*
-    The second member function in Hand is dealCard , which has a parameter num
-    that represents the position of a card in the hand. Use this function to let human
-    deal a card from their hand. When a card is dealt, it should be removed from
-    hand . For the above example, dealCard(2) would deal card orange:7 and
-    remove it from the hand.
-*/  
-    
-    Card dealtCard = hand.at(num - 1);
+    Card dealtCard = hand.at(num - 1); // initialize dealtCard before that position of hand gets erased
     hand.erase(hand.begin() + (num - 1)); // erase the Card at the position (considering 0 is the starting position)
     return dealtCard;
 }
