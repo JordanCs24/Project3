@@ -15,8 +15,8 @@ Description:
 
 Deck::Deck(){
     //Initializing variables for orange and purple card iteration with 1 so the 
-    short int orangeCard = 1;
-    short int purpleCard = 1;
+    int orangeCard = 1;
+    int purpleCard = 1;
     for(int i = 0; i < 30; i++){ // With this loop we're going to store the cards according to it's color
         if(i >= 0 && i <= 4){
             deck.push_back(Card(i + 1,Color::black)); // Added i + 1 so the rank isn't for example rank(0)

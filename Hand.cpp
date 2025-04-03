@@ -12,11 +12,7 @@ Hand::Hand(){
 
 }
 Hand::Hand(Deck deck, int N){
-/*
-    Hand has a parameterized constructor, which you will use to deal a hand of cards
-    from the deck. Implement this constructor so that it draws N cards from the deck
-    when an instance of Hand is instantiated.
-*/
+
    for( int i = 0; i < N;i++){
         hand.push_back(deck.drawCard());
     }
@@ -31,6 +27,7 @@ string Hand::strHand(){
     in vector hand).
 */
     stringstream showHand;
+    showHand.flush();
     for(int i = 0; i < hand.size(); i++){
         showHand << "[" << i + 1 << "] " << hand[i].strCard() << " ";
     }
@@ -43,7 +40,8 @@ Card Hand::dealCard(int num){
     deal a card from their hand. When a card is dealt, it should be removed from
     hand . For the above example, dealCard(2) would deal card orange:7 and
     remove it from the hand.
-*/
+*/  
+    
     Card dealtCard = hand.at(num - 1);
     hand.erase(hand.begin() + (num - 1)); // erase the Card at the position (considering 0 is the starting position)
     return dealtCard;
